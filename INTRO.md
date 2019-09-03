@@ -1,19 +1,8 @@
-# wymagania
-# node + npx + yarn
-# react-scripts - yarn add react-scripts
-# create-react-app - npm i -g create-react-app + npx create-react-app projectnam
-# terminal (conemu dla windows, defaultowe dla mac/linux)
-# chrome
-# vscode
-
-
 ## INTRO
 # react to biblioteka w JavaScript od facebooka, nie jest to framework (opisać jaka różnica)
 # react jest używany do tworzenia single-page-app (SPA) 
 # react posiada dobrze rozbudowane community devów, aktywnie rozwijających repozytoria, bardzo dużo wiedzy, dobrych standardów
 # stack techniczny reacta to jedna z najbardziej pożądanych ścieżek rozwoju front-end devów
-
-
 
 ## Przewagi reacta
 # niski próg wejścia
@@ -25,7 +14,6 @@
 # obsługa prekompilatorów CSS - Sass/Less
 # wykorzystuje MVC pattern - model (dane z api), view (komponenty reacta), controller (logika)
 # istnieje biblioteka React-Native pozwalająca devom od reacta stać się mobile devami, z minimalnym progiem wejscia
-
 
 
 ## Minusy reacta
