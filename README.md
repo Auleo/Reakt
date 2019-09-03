@@ -1,3 +1,5 @@
+
+
 # Przed rozpoczęciem nauki z reacta powinno się zapoznać z zagadnieniami z HTML,CSS,JS takimi jak:
 - arrow function - ()=>{}
 - curring - ()=>()=>{}
