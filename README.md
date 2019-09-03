@@ -34,13 +34,20 @@
 ---
 # Odpalanie apki Reacta
 > aby wystartować apkę do pracy
-#### 1. `yarn start`
-#### 2. apka zostanie wystawiona na localhost:3000 w przeglądarce
+#### 1. `yarn`
+> instalacja modułów niezbędnych od odpalenia apki
+#### 2. `yarn start`
+> odpalenie środowiska developerskiego i apki
+#### 3. apka zostanie wystawiona na localhost:3000 w przeglądarce
 
 
 ---
 # Zbudowanie apki Reacta
 > aby zbudować apkę pod deployment
+#### 1. `yarn`
+> instalacja modułów niezbędnych od odpalenia apki
 #### 1. `yarn build`
+> zbudowanie apki pod wersję produkcyjną
 #### 2. `serve -s build`
+> odpalenie środowiska produkcyjnego i apki
 #### 3. zbudowana zostanie wystawiona na localhost:5000 w przeglądarce
