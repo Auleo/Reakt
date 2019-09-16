@@ -1,21 +1,4 @@
-html, body{
-}
-.app{
+body{  }
 
+h1 { font-color:grey; }
 
-}
-
-.app h1{
-    text-align: center;
-}
-
-.todo-item{
-    color:red;
-}
-
-
-.todo-item.active{
-    color:blue;
-}
-
- 

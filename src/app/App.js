@@ -1,18 +1,51 @@
-import React, {Component} from 'react'
-import LifeCycleOfReactComponent from './lifecycleOfComponent'
+import React from 'react';
+import Header from './components'
+import './App.css';
+import TodoList from './components.state.js'
 
-import './App.css'
 
+import './App.css';
 
-const App = () => {
-	return (
-		<div className='app'>
-      <div className='container'>
-        <LifeCycleOfReactComponent/>
-			</div>
-		</div>
-	)
+// JSX i VirtualDOM
+
+const TempComponent = ({text})=>{
+  return (<h1>{text}</h1>)
 }
 
-export default App
- 
+
+// const Component = (props) => {
+  // return (html)
+// }
+
+
+const BlueDiv = ({children})=>{
+  return (
+    <div style={{background:'blue', padding:10}}>
+    <h2>test1</h2>
+      {children}
+    </div>
+  )
+}
+
+const RedDiv = ()=>{
+  return (
+    <div style={{background:'red'}}>
+      test2
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div className="app">
+    <BlueDiv>
+      <RedDiv/>
+      <RedDiv/>
+      <RedDiv/>
+      <RedDiv/>
+    </BlueDiv>
+    </div>
+  );
+}
+
+export default App;

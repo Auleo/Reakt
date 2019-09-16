@@ -1,149 +1,113 @@
-import React from 'react';
-
-const EmailInput = ({value, onChange})=>{
-    return (
-      <div className="form-group">
-        <input className="form-control"
-          placeholder="Wpisz email"
-          type="email" value={value} 
-          onChange={(ev)=>{
-            onChange(ev.target.value)
-          }}/>
+7
+const cwiczenie = () => {
+    return ( 
+        <div className='app-cwiczenie'><center>
+        <h1>
+            Lorem Ipsum
+            </h1>
+            <h3>
+            Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. 
+            </h3>
+            <section>      
+            <table>
+                <tr>
+                    <td>1</td>	<td>...</td>
+                </tr>
+            <tr>
+                <td>2 </td>	<td>...</td>
+            </tr>
+            </table>                
+            </section>
+            </center>
         </div>
     )
-  }
-  
-  const PasswordInput = ({value, onChange})=>{
-    return (
-      <div className="form-group">
-        <input className="form-control" 
-        placeholder="Wpisz hasło"
-        type="password" value={value} onChange={(ev)=>{
-          onChange(ev.target.value)
-        }}/>
-        </div>
-    )
-  }
-  
-  const Button = ({onClick, text})=>{
-    return (
-      <div className="form-group">
-        <button onClick={onClick} 
-        className="btn btn-primary btn-sm form-control">{text}</button>
-        </div>
-    )
-  }
-  
-  
-class AuthForm extends Component {
-  constructor(props){
-    super(props)
 
-    this.state = {
-      'email':'',
-      'password':'', 
-      'imAuthed': false,
-      'imBusy': false
-    }
-
-    this.onChangeEmail = this.onChangeEmail.bind(this)
-    this.onChangePassword = this.onChangePassword.bind(this)
-    this.onLogin = this.onLogin.bind(this)
-    this.onLogout = this.onLogout.bind(this)
-
-  }
-
-  onChangeEmail(value){
-    // console.log('onChangeEmail', value)
-
-    // tak robimy
-    this.setState({
-      'email':value
-    })
-
-    // tak nie robimy !!
-    // this.state.email = value
-  }
-
-  onChangePassword(value){
-    // console.log('onChangePassword', value)
-
-    this.setState({
-      'password':value
-    })
-
-  }
-
-  onLogin(ev){
-    ev.preventDefault()
-
-    const {email, password} = this.state
-
-    this.setState({
-      imBusy:true
-    })
-    // prawie jak axios
-    setTimeout(()=>{
-      this.setState({
-        imAuthed: true,
-        imBusy: false
-      })
-    }, 2000)
-  }
-
-  onLogout(ev){
-    ev.preventDefault()
-
-    this.setState({
-      imBusy:true
-    })
-
-    // prawie jak axios
-    setTimeout(()=>{
-      this.setState({
-        imAuthed: false,
-        imBusy: false,
-        email:'',
-        password:''
-      })
-    }, 1000)
-  }
-
-  render(){
-
-    const {email, password, imAuthed, imBusy} = this.state
-
-    if(imBusy){
-      return (
-        <div className="alert alert-primary">
-          <h1>loading</h1>
-        </div>
-      )
-    }
-
-    if (imAuthed){
-      return (
-        <div className="alert alert-success">
-          <h1>Hej {email}!</h1>
-          <h1>Dziękuje za zalogowanie się do apki</h1>
-          <Button text='Wyloguj' onClick={this.onLogout}/>
-        </div>
-      )
-    }
-    else{    
-      return (
-        <form className="form">
-          <h1>Formularz logowania</h1>
-          <EmailInput value={email} onChange={this.onChangeEmail}/>
-          <PasswordInput value={password} onChange={this.onChangePassword}/>
-          <Button onClick={this.onLogin} text='Zaloguj'/>
-          <hr/>
-          {JSON.stringify(this.state)}
-        </form>
-      )
-    }
-
-  }
 }
 
-export {EmailInput, PasswordInput, Button}
+// jsx element 
+const Small = (<small>mały tekst</small>); // zadeklarowane wyrazenie - to oznacza zwróć / dla dodawania ikon
+
+const Strong = ()=>{
+    return (<strong>Jakiś pogrubiony tekst</strong>)
+}
+const todoList = ['todo1','todo2','todo3']
+
+const forEach = (listOfElems, callback=()=>{})=>{
+     for (const element of listOfElems){
+         callback(element)
+     }
+     for (const idx in listOfElems){
+         const element = listOfElems[idx]
+         callback(element)
+     }
+ }
+
+ const map = (listOfElems, callback=()=>{})=>{
+
+     const newArray = []
+
+     for (const element of listOfElems){
+         const modifiedElement = callback(element)
+         newArray.push(modifiedElement)
+     }
+
+//     return newArray
+// }
+
+
+
+const ToDo = ({text, index, onEdit, onDelete}) => {
+
+    let classes = ['todo-item'].join(' ')
+
+    return (<li>
+            <div className={classes}>
+                {text}{' '}
+                <button >Edit</button>{' '}
+                <button >Delete</button> 
+            </div>
+        </li>)
+}
+
+const TodoList = ({list = todoList}) => {
+    return (<ul>
+            {list.map((el, key)=>{
+                return (
+                    <ToDo text={el} index={key} key={key} onEdit={()=>{}} onDelete={()=>{}}/> 
+                )
+            })}
+        </ul>)
+}
+
+const ComponentWithData = ({list, imBusy=false, imWithError=false}) =>{
+
+    if(imBusy){
+        return (<small>loading</small>)
+    }
+    else{
+        if(imWithError){
+            return (<small>error</small>)
+        }
+        else{
+            return (
+                <TodoList list={list}/>
+            )
+        }
+    }
+
+}
+
+
+
+
+// jsx component - 95%
+const Header = (props) => {
+    return (
+        <div className='app-header'>
+            <ComponentWithData/>
+        </div>
+    )
+}
+
+
+export default Header

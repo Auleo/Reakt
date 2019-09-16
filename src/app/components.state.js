@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 
-
-
-
-
 class ToDoList extends Component {
 
     constructor(props){
@@ -14,6 +10,7 @@ class ToDoList extends Component {
         }
     }
 
+    
     render(){
         const { list } = this.state
             return (
