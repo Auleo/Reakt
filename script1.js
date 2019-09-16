@@ -13,18 +13,18 @@ function add(a) {
         return a + b
     }
 }
-// const add = (a) => (b) => (a + b)   wez a zwróć funkcje której mog zwrócić b zwróć funkcj ,która zwrócić a+b
+// const add = (a) => (b) => (a + b)
 // const five = add(2)(3)
 // console.log('five', five)
 // class / constuctor / method / property
 
-// object oriented programming twozymy programyy ,które si zesobą komunikują
-// 
-// functional programming - programowanie funkcyjne -wszystko co robimy w kodzie jest funkcja 
-  
+// object oriented programming 
+// functional programming - programowanie funkcyjne 
+
 class Counter {
     constructor(props) {
         // super(props)
+
         // properies
         this.startFrom = 0
         this.endOn = 10
@@ -106,6 +106,7 @@ const resolve = ()=>{
 const reject = ()=>{
     console.log('error')
 }
+  
 const timer = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         if(false){
@@ -126,4 +127,4 @@ timer.then((data)=>{
 
 
 // ajax / fetch
-// import / export / modules
+// import / export / module

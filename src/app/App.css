@@ -1,0 +1,21 @@
+html, body{
+}
+.app{
+
+
+}
+
+.app h1{
+    text-align: center;
+}
+
+.todo-item{
+    color:red;
+}
+
+
+.todo-item.active{
+    color:blue;
+}
+
+ 
