@@ -5,7 +5,6 @@ import TodoList from './components.js'
 
 
 import './App.css';
-
 // JSX i VirtualDOM
 
 const TempComponent = ({text})=>{

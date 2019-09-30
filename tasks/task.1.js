@@ -6,31 +6,48 @@
 // zakodować tabelke w normalnym html i wyświetlić ją w apce reacta
 
 const TempTable = ()=>{
-    return (<table>
-      <thead>
-        <tr>
-          <th>Month</th>
-          <th>Savings</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>January</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>February</td>
-          <td>$80</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-           
-          <td>Sum</td>
-          <td>$180</td>
-        </tr>
-      </tfoot>
-    </table>)
+    return (<table border="5">
+    <TR>
+      <TD colspan="7"> <center><h1>head row</h1></center></TD> 
+      
+    </TR>
+    <TR> 
+        <TD>1 Standardowy Lorem</TD><TD> Ipsum</TD> <TD colspan="3">---error---none---#be empty</TD>
+    </TR> 
+    <TR border="2"> 
+     <TD>2 @@@@@@@@</TD><TD>(- .-)</TD> <TD>0+0</TD><TD>bz zzz</TD><TD>(- .-)'</TD>
+    </TR> 
+    <TR border="8"> 
+    <TD>3 @@@@@@@@@</TD><TD>(" - ")</TD> <TD>bz zz z</TD><TD>(- .-)</TD><TD>5</TD>
+    </TR> 
+   
+    <TR> 
+    <TD>4 @@@@@@@@</TD><TD>0+0</TD> <TD>bz zz z</TD><TD>(" - ")</TD><TD>(- .-)</TD>
+    </TR>
+    
+    <TR> 
+    <TD>5 @@@@@@@</TD><TD>(- .-)</TD> <TD>0+0</TD><TD>4</TD><TD>(- .-)</TD>
+    </TR>
+    
+    <TR> 
+    <TD>6 @@@@@@@</TD><TD>0+0</TD> <TD>(- .-)</TD><TD>bz zz z</TD><TD>(" - ")</TD>
+    </TR>
+     
+    <TR> 
+    <TD>7 @@@@@</TD><TD>(- .-)</TD> <TD>(- .-)</TD><TD>0+0</TD><TD>bz zz z</TD>
+    </TR>
+    
+    <TR> 
+    <TD>8 @@@@@</TD><TD>2</TD> <TD>(" - ")</TD><TD>p - p</TD><TD>(- .-)</TD>
+    </TR>
+    
+    <TR> 
+    <TD>9 @@@</TD><TD>(" - ")</TD> <TD>3</TD><TD>(- .-)</TD><TD>0+0</TD>
+    </TR>
+   <TR> 
+    <TD>10 @@@@@@@</TD><TD>0+0</TD> <TD>(- .-)</TD><TD>bz zz z</TD><TD>(" - ")</TD>
+    </TR>
+</table>)
   }
 
 // podzielić tabelkę na thead i tbody

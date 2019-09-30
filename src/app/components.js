@@ -1,4 +1,13 @@
-7
+import React Component from 'react'; 
+
+
+class RegistrationFrom extends Component 
+
+
+
+
+
+
 const cwiczenie = () => {
     return ( 
         <div className='app-cwiczenie'><center>
@@ -8,16 +17,6 @@ const cwiczenie = () => {
             <h3>
             Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. 
             </h3>
-            <section>      
-            <table>
-                <tr>
-                    <td>1</td>	<td>...</td>
-                </tr>
-            <tr>
-                <td>2 </td>	<td>...</td>
-            </tr>
-            </table>                
-            </section>
             </center>
         </div>
     )
