@@ -1,8 +1,8 @@
+import React from 'react';
 
- import React from 'react';
 // 1. z podanego htmla wytworzyć aktywnie działające komponenty stanowe
 const htmlInput = (<div>
-        <input placeholder='Wpisz tekst'/>
+        <input placeholder='tekst'/>
         </div>)
 
 class Input extends Component{
